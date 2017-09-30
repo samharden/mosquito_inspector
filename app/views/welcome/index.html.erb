@@ -326,7 +326,24 @@ button, input, textarea {
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block text-dark" style="margin-left:7px; margin-right:7px"><center><br>
         <p style="max-width:80%; text-align:justify">Some paragraph text here</p>
+        <%= form_with scope: :article, local: true do |form| %>
+  <p>
+    <%= form.label :Street_Address %><br>
+    <%= form.text_field :Address %>
+  </p>
 
+  <p>
+    <%= form.label :City %><br>
+    <%= form.text_field :text %>
+  </p>
+  <p>
+    <%= form.label :Zip %><br>
+    <%= form.text_field :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
         <br><br>
 
     </div>
